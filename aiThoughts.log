@@ -1,0 +1,12 @@
+DEBUG:root: Turn   1: Player 1 AI  moved to (a,c) randomly
+DEBUG:root: Turn   2: Player 2 AI  moved to (b,b) randomly
+DEBUG:root: Turn   3: Player 1 AI  moved to (b,a) randomly
+DEBUG:root: Turn   4: Player 2 AI  moved to (c,c) randomly
+DEBUG:root: Turn   5: Player 1 AI  moved to (a,a) to block opponent win
+DEBUG:root: Turn   6: Player 2 AI  moved to (c,a) to block opponent win
+DEBUG:root: Turn   7: Player 1 AI  moved to (c,b) to block opponent win
+DEBUG:root: Turn   8: Player 2 AI  moved to (a,c) randomly
+DEBUG:root: Turn   9: Player 1 AI  moved to (b,b) to block opponent win
+DEBUG:root: Turn  10: Player 2 AI  moved to (a,b) to block opponent win
+DEBUG:root: Turn  11: Player 1 AI  moved to (b,a) randomly
+DEBUG:root: Turn  12: Player 2 AI  moved to (a,a) to win
