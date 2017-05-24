@@ -16,6 +16,5 @@ Enter in each move you want to make, column then row (to the top middle space is
 The program saves moves data in a log file. From the same directory, run 
 ```
 tail -f aiThoughts.log
-'''
-
+```
 in the terminal to see it in real time. The AI will also justify its moves.
