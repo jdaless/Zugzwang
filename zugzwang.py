@@ -7,8 +7,17 @@ from termcolor import colored
 
 numToSpaces = {0:"a",1:"b",2:"c"}
 turn = 0
+
+def playerToColor(p):
+	if(p==1):
+		return "White"
+	if(p==2):
+		return "Black"
+	else:
+		return ""
+
 def printMove(player, name, move, reason):
-	logging.debug(" Turn "+str(turn).rjust(3)+": Player "+str(player) + " "+name+" moved to ("+numToSpaces[move[1]]+","+numToSpaces[move[0]]+") "+reason)		
+	logging.debug(" Turn "+str(turn).rjust(3)+": "+ playerToColor(player) + " "+name+" moved to ("+numToSpaces[move[1]]+","+numToSpaces[move[0]]+") "+reason)		
 
 def increment(currentMove, i):
 	if(i>0):
@@ -185,9 +194,9 @@ class Game:
 			b1 = b1 + self.printableRealPiece((self.currentMove+i) % 6) + " "
 		b1 = b1+"\n"
 		b2 = " a  "+self.printablePiece(board[0][0])+" ¦ "+self.printablePiece(board[0][1])+ " ¦ "+self.printablePiece(board[0][2]) + "\n"
-		b3 = "   ---+---+---         Player 1:  ("+colored("X",'red')+")\n"
+		b3 = "   ---+---+---         White:  ("+colored("X",'red')+")\n"
 		b4 = " b  "+self.printablePiece(board[1][0])+" ¦ "+self.printablePiece(board[1][1])+ " ¦ "+self.printablePiece(board[1][2]) + "\n"
-		b5 = "   ---+---+---         Player 2:  ("+colored("X",'blue')+")\n"	
+		b5 = "   ---+---+---         Black:  ("+colored("X",'blue')+")\n"	
 		b6 = " c  "+self.printablePiece(board[2][0])+" ¦ "+self.printablePiece(board[2][1])+ " ¦ "+self.printablePiece(board[2][2]) + "\n"
 		print(b1 + b2 + b3 + b4 + b5 + b6)
 
@@ -257,7 +266,7 @@ if(players=="2"):
 		if(game.turn()):
 			os.system("clear")
 			game.drawBoard()
-	print("Player",game.checkForWin(),"wins!!!")
+	print(playerToColor(game.checkForWin()),"wins!!!")
 elif(players=="1"):
 	game = Game()
 	game.drawBoard()
@@ -289,4 +298,4 @@ elif(players=="0"):
 		print("Turn: ", turn)
 		if(game.turn(True)):
 			game.drawBoard()
-	print("Player",game.checkForWin(),"wins!!!")
+	print(playerToColor(game.checkForWin()),"wins!!!")
