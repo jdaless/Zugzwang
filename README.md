@@ -2,6 +2,8 @@
 A console app to play a Zugzwang
 ## Rules
 Each turn, place a piece. What piece you play moves through the cycle of pawn, knight, king, pawn, etc. If a piece is on the board, pick it up and place it in an empty space. Get three in a row to win.
+
+See more info at zugzwang.wikia.com
 ## Software
 Right now only works on Linux, sorry.
 ### Setup
